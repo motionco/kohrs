@@ -13,7 +13,7 @@ const PopularPosts = () => {
     return (
         <div className={styles.items}>
             {posts.map((post) => (
-                <Link href={`/${post.slug}`} className={styles.item}>
+                <Link href={`/${post.slug}`} key={post.slug} className={styles.item}>
                     <div className={styles.textContainer}>
                         <span className={`${styles.category} ${styles[post.catSlug]}`}>{post.catSlug}</span>
                         <h3 className={styles.postTitle}>{post.title}</h3>
