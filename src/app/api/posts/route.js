@@ -18,13 +18,6 @@ export const GET = async (req) => {
     },
   };
 
-
-
-
-
-
-  
-  
   try {
     const [posts, count] = await prisma.$transaction([
       prisma.post.findMany(query),
@@ -40,14 +33,6 @@ export const GET = async (req) => {
 };
 
 
-
-
-
-
-
-
-
-
 // CREATE A POST
 export const POST = async (req) => {
   const session = await getAuthSession();
@@ -61,7 +46,7 @@ export const POST = async (req) => {
   try {
     const body = await req.json();
     const post = await prisma.post.create({
-      data: { ...body, userEmail: session.user.email },
+      data: { ...body, userEmail: session.user.email, isFeatured: body.isFeatured },
     });
 
     return new NextResponse(JSON.stringify(post, { status: 200 }));

@@ -25,6 +25,7 @@ const WritePage = () => {
   const [value, setValue] = useState("");
   const [title, setTitle] = useState("");
   const [catSlug, setCatSlug] = useState("");
+  // const [isEditorsPick, setIsEditorsPick] = useState("");
 
   useEffect(() => {
     const storage = getStorage(app);
@@ -49,7 +50,7 @@ const WritePage = () => {
               break;
           }
         },
-        (error) => {},
+        (error) => { },
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
             setMedia(downloadURL);
@@ -86,6 +87,7 @@ const WritePage = () => {
         img: media,
         slug: slugify(title),
         catSlug: catSlug || "style", //If not selected, choose the general category
+        isFeatured: false
       }),
     });
 
@@ -144,6 +146,10 @@ const WritePage = () => {
           placeholder="Tell your story..."
         />
       </div>
+      {/* <div className={styles.checkboxContainer}>
+        <input type="checkbox" id="editorsPick" checked={isEditorsPick} onChange={(e) => setIsEditorsPick(e.target.checked)} />
+        <label htmlFor="editorsPick">Editors Pick</label>
+      </div> */}
       <button className={styles.publish} onClick={handleSubmit}>
         Publish
       </button>
