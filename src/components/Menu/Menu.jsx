@@ -3,6 +3,7 @@ import styles from "./menu.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import MenuPosts from "../menuPosts/MenuPosts";
+import MenuPostsPick from "../menuPostsPick/MenuPostsPick";
 import MenuCategories from "../menuCategories/MenuCategories";
 
 const Menu = () => {
@@ -16,7 +17,7 @@ const Menu = () => {
       <MenuCategories />
       <h2 className={styles.subtitle}>Chosen by the editor</h2>
       <h1 className={styles.title}>추천글</h1>
-      <MenuPosts withImage={true} />
+      <MenuPostsPick withImage={true} />
     </div>
   );
 };

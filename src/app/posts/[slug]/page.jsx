@@ -2,6 +2,7 @@ import Menu from "@/components/Menu/Menu";
 import styles from "./singlePage.module.css";
 import Image from "next/image";
 import Comments from "@/components/comments/Comments";
+import sanitizeHtml from 'sanitize-html';
 
 const getData = async (slug) => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts/${slug}`, {
@@ -20,7 +21,15 @@ const getData = async (slug) => {
 const SinglePage = async ({ params }) => {
   const { slug } = params;
 
-  const data = await getData(slug);
+  let data = await getData(slug);
+
+  data = {
+    ...data,
+    title: sanitizeHtml(data.title),
+    desc: sanitizeHtml(data.desc),
+    img: sanitizeHtml(data.img),
+    content: sanitizeHtml(data.content),
+  };
 
   return (
     <div className={styles.container}>

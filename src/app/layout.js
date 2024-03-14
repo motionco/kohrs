@@ -9,13 +9,13 @@ import AuthProvider from "@/providers/AuthProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Lama Dev Blog App",
+  title: "컨설팅 Blog App",
   description: "The best blog app!",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <body className={inter.className}>
         <AuthProvider>
           <ThemeContextProvider>

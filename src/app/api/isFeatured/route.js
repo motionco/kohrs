@@ -10,7 +10,7 @@ export const GET = async (req) => {
   const query = {
     where: {
       ...(cat && { catSlug: cat }),
-      idEditorsPick: true,
+      isFeatured: true,
     },
     orderBy: {
       createdAt: "desc",

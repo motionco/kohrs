@@ -25,7 +25,7 @@ const WritePage = () => {
   const [value, setValue] = useState("");
   const [title, setTitle] = useState("");
   const [catSlug, setCatSlug] = useState("");
-  // const [isEditorsPick, setIsEditorsPick] = useState("");
+  const [isEditorsPick, setIsEditorsPick] = useState("");
 
   useEffect(() => {
     const storage = getStorage(app);
@@ -74,20 +74,25 @@ const WritePage = () => {
     str
       .toLowerCase()
       .trim()
-      .replace(/[^\w\s-]/g, "")
+      // .replace(/[^\w\s-]/g, "")
+      .replace(/[^a-zA-Z0-9ㄱ-ㅎㅏ-ㅣ]/g, "")
       .replace(/[\s_-]+/g, "-")
       .replace(/^-+|-+$/g, "");
 
   const handleSubmit = async () => {
+
     const res = await fetch("/api/posts", {
       method: "POST",
+      headers: {
+        'Content-Type': 'application/json; charset=UTF-8'
+      },
       body: JSON.stringify({
         title,
         desc: value,
         img: media,
         slug: slugify(title),
         catSlug: catSlug || "style", //If not selected, choose the general category
-        isFeatured: false
+        isFeatured: isEditorsPick || false
       }),
     });
 
@@ -146,10 +151,10 @@ const WritePage = () => {
           placeholder="Tell your story..."
         />
       </div>
-      {/* <div className={styles.checkboxContainer}>
+      <div className={styles.checkboxContainer}>
         <input type="checkbox" id="editorsPick" checked={isEditorsPick} onChange={(e) => setIsEditorsPick(e.target.checked)} />
         <label htmlFor="editorsPick">Editors Pick</label>
-      </div> */}
+      </div>
       <button className={styles.publish} onClick={handleSubmit}>
         Publish
       </button>
