@@ -7,6 +7,8 @@ import useSWR from "swr";
 import { useSession } from "next-auth/react";
 import { useState } from "react";
 
+export const dynamic = "force-dynamic";
+
 const fetcher = async (url) => {
   const res = await fetch(url);
 

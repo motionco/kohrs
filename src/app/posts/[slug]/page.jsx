@@ -4,6 +4,8 @@ import Image from "next/image";
 import Comments from "@/components/comments/Comments";
 import sanitizeHtml from 'sanitize-html';
 
+export const dynamic = "force-dynamic";
+
 const getData = async (slug) => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts/${slug}`, {
     // const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts/${slug}?popular=true`, {
