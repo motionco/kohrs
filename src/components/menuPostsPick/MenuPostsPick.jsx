@@ -3,8 +3,6 @@ import Link from "next/link";
 import React from "react";
 import styles from "./menuPostsPick.module.css"
 
-export const dynamic = "force-dynamic";
-
 const getData = async () => {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/api/isFeatured`,

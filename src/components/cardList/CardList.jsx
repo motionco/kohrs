@@ -4,8 +4,6 @@ import Pagination from "../pagination/Pagination";
 import Image from "next/image";
 import Card from "../card/Card";
 
-export const dynamic = "force-dynamic";
-
 const getData = async (page, cat) => {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/api/posts?page=${page}&cat=${cat || ""}`,

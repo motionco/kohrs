@@ -3,8 +3,6 @@ import styles from "./categoryList.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
-export const dynamic = "force-dynamic";
-
 const getData = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/categories`, {
     cache: "no-store",
