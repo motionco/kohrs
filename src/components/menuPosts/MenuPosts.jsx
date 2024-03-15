@@ -5,7 +5,7 @@ import styles from "./menuPosts.module.css"
 
 const getData = async () => {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/posts`,
+    `${process.env.NEXT_PUBLIC_API_URL}/api/popularposts`,
     {
       cache: "no-store",
     }

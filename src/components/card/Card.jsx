@@ -3,8 +3,6 @@ import styles from "./card.module.css";
 import Link from "next/link";
 import sanitizeHtml from 'sanitize-html';
 
-export const dynamic = "force-dynamic";
-
 const Card = ({ key, item }) => {
 
   const sanitizedItem = {
