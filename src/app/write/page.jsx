@@ -75,7 +75,8 @@ const WritePage = () => {
       .toLowerCase()
       .trim()
       // .replace(/[^\w\s-]/g, "")
-      .replace(/[^a-zA-Z0-9ㄱ-ㅎㅏ-ㅣ]/g, "")
+      // .replace(/[^a-zA-Z0-9ㄱ-ㅎㅏ-ㅣ]/g, "")
+      .replace(/[^a-zA-Z0-9ㄱ-ㅎㅏ-ㅣ가-힣]/g, "")
       .replace(/[\s_-]+/g, "-")
       .replace(/^-+|-+$/g, "");
 
