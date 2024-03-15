@@ -30,6 +30,7 @@ const SinglePage = async ({ params }) => {
     img: sanitizeHtml(data.img),
     content: sanitizeHtml(data.content),
   };
+  // console.log(data);
 
   return (
     <div className={styles.container}>

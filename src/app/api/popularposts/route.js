@@ -15,6 +15,9 @@ export const GET = async (req) => {
       views: "desc",
     },
     take: 4,
+    include: {
+      user: true, // user 정보 포함
+    },
   };
 
   try {

@@ -25,7 +25,7 @@ const WritePage = () => {
   const [value, setValue] = useState("");
   const [title, setTitle] = useState("");
   const [catSlug, setCatSlug] = useState("");
-  const [isEditorsPick, setIsEditorsPick] = useState("");
+  const [isFeatured, setIsFeatured] = useState("");
 
   useEffect(() => {
     const storage = getStorage(app);
@@ -75,7 +75,6 @@ const WritePage = () => {
       .toLowerCase()
       .trim()
       // .replace(/[^\w\s-]/g, "")
-      // .replace(/[^a-zA-Z0-9ㄱ-ㅎㅏ-ㅣ]/g, "")
       .replace(/[^a-zA-Z0-9ㄱ-ㅎㅏ-ㅣ가-힣]/g, "")
       .replace(/[\s_-]+/g, "-")
       .replace(/^-+|-+$/g, "");
@@ -93,7 +92,7 @@ const WritePage = () => {
         img: media,
         slug: slugify(title),
         catSlug: catSlug || "style", //If not selected, choose the general category
-        isFeatured: isEditorsPick || false
+        isFeatured: isFeatured || false
       }),
     });
 
@@ -153,7 +152,7 @@ const WritePage = () => {
         />
       </div>
       <div className={styles.checkboxContainer}>
-        <input type="checkbox" id="editorsPick" checked={isEditorsPick} onChange={(e) => setIsEditorsPick(e.target.checked)} />
+        <input type="checkbox" id="editorsPick" checked={isFeatured} onChange={(e) => setIsFeatured(e.target.checked)} />
         <label htmlFor="editorsPick">Editors Pick</label>
       </div>
       <button className={styles.publish} onClick={handleSubmit}>
