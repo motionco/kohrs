@@ -5,7 +5,7 @@ import styles from "./menuPostsPick.module.css"
 
 const getData = async () => {
   const res = await fetch(
-    `${NEXT_PUBLIC_API_URL}/api/isFeatured`,
+    `/api/isFeatured`,
     {
       cache: "no-store",
     }
