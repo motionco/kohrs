@@ -27,7 +27,7 @@ const CategoryList = async () => {
             className={`${styles.category} ${styles[item.slug]}`}
             key={item._id}
           >
-            {item.img && (
+            {item?.img && (
               <Image
                 src={item.img}
                 alt=""

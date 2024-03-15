@@ -14,7 +14,7 @@ const Card = ({ key, item }) => {
 
   return (
     <div className={styles.container} key={key}>
-      {sanitizedItem.img && (
+      {sanitizedItem?.img && (
         <div className={styles.imageContainer}>
           <Image src={sanitizedItem.img} alt="" fill className={styles.image} />
         </div>
