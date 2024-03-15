@@ -6,7 +6,7 @@ import sanitizeHtml from 'sanitize-html';
 
 const getData = async (slug) => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts/${slug}`, {
-    // const res = await fetch(`http://localhost:3000/api/posts/${slug}?popular=true`, {
+    // const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts/${slug}?popular=true`, {
     // model Post { isFeature~~~~~
     cache: "no-store",
   });
