@@ -22,9 +22,9 @@ const fetcher = async (url) => {
 
 const Comments = ({ postSlug }) => {
   const { status } = useSession();
-
+  const encodedSlug = encodeURIComponent(postSlug); // Encode for URL safety
   const { data, mutate, isLoading } = useSWR(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/comments?postSlug=${postSlug}`,
+    `${process.env.NEXT_PUBLIC_API_URL}/api/comments?postSlug=${encodedSlug}`,
     fetcher
   );
 

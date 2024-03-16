@@ -19,13 +19,13 @@ const LoginPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <div className={styles.socialButton} onClick={async() => await signIn("google")}>
+        <div className={styles.socialButton} onClick={async () => await signIn("google")}>
           Sign in with Google
         </div>
-        <div className={styles.socialButton} onClick={() => signIn("github")}>
+        <div className={styles.socialButton} onClick={async () => await signIn("github")}>
           Sign in with Github
         </div>
-        <div className={styles.socialButton}>Sign in with Facebook</div>
+        <div className={styles.socialButton} onClick={async () => await signIn("facebook")}>Sign in with Facebook</div>
       </div>
     </div>
   );
