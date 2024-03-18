@@ -35,24 +35,16 @@
 }
 
 .imgContainer {
-  width: 100%;
-  height: 200px;
-  position: relative;
-}
+  width: 600px;
+  height: 600px;
 
-.img {
-  object-fit: cover;
-}
-
-.imgContainer2 {
-  width: 100%;
-  height: 400px;
   position: relative;
   /* margin: 0 auto; */
 }
 
-.img2 {
-  object-fit: contain;
+.img {
+  object-fit: corver;
+  /* object-fit: contain; */
 }
 
 /* 하위 메뉴를 위한 스타일 추가 */
