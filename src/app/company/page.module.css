@@ -1,0 +1,120 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* 텍스트를 가운데 정렬합니다. */
+}
+
+.mainTitle {
+  /* font-size: 56px; */
+  color: #53C2C4;
+  margin: 20px 0px 10px 0px;
+}
+
+.mainDesc {
+  font-size: 20px;
+  color: #757575;
+  margin: 10px 0px;
+  line-height: 1.5;
+  font-weight: normal;
+  text-align: center;
+}
+
+.selectTitle {
+  margin: 20px 0px;
+}
+
+
+.itm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.imgContainer {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.imgContainer2 {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  /* margin: 0 auto; */
+}
+
+.img2 {
+  object-fit: contain;
+}
+
+.items {
+  display: flex;
+  gap: 80px;
+}
+
+.item {
+  border: 5px solid #bbb;
+  border-radius: 5px;
+  width: 360px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover !important;
+  background-position: center;
+  transition: all 0.5s ease;
+  filter: grayscale(70%);
+}
+
+.item:hover::before {
+  transform: scale(1.1);
+  filter: grayscale(0);
+}
+
+.item:nth-child(1)::before {
+  background: url("/videos.jpg");
+}
+
+.item:nth-child(2)::before {
+  background: url("/websites.jpg");
+}
+
+.item:nth-child(3)::before {
+  background: url("/educations.jpg");
+}
+
+.title {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.item:hover .title {
+  color: #53C2C4;
+}
+
+@media (max-width: 768px) {
+  .items {
+    flex-direction: column;
+    align-items: center;
+  }
+}

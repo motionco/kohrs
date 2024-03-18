@@ -6,7 +6,7 @@ const Featured = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>
-        <b>Hey, lama dev here!</b> Discover my stories and creative ideas.
+        <b>㈜한국HRD컨설팅그룹</b>은 기업의 올바른 성장을 돕는 맞춤형 HR솔루션 제공합니다.
       </h1>
       <div className={styles.post}>
         <div className={styles.imgContainer}>
