@@ -13,7 +13,7 @@ const Commission = () => {
           <div className={styles.content}>
             <h2 className={styles.mainTitle}>미션/비젼/가치
             </h2>
-            <p className={styles.mainDesc}>미션/비젼/가치 임시파일
+            <p className={styles.mainDesc}>미션/비젼/가치(임시)
             </p>
 
           </div>

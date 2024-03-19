@@ -4,17 +4,17 @@ import Link from "next/link";
 import Imgbar from "@/components/imgbar/imgbar";
 import Image from "next/image";
 
-const Consulting = () => {
+const Consystem = () => {
   return (
     <>
       <Imgbar />
       <div className={styles.container}>
         <div className={styles.itm}>
           <div className={styles.content}>
-            <h2 className={styles.mainTitle}>컨설팅 프로세스
+            <h2 className={styles.mainTitle}>역량기반 교육체계수립 컨설팅
             </h2>
-            <p className={styles.mainDesc}>☞ 고객사에게 최적의 Solution을 제공하기 위하여, 고객사의 니즈 파악 및 컨설팅 목표 합의-현황 분석-문제발견-솔루션 제공-실행 및 사후 대책의 5단계 프로세스로 진행합니다.
-
+            <p className={styles.mainDesc}>역량기반 교육체계수립 컨설팅은 역량모델링을 통해 도출된 공통역량, 직무역량, 리더십역량을 토대로, 조직의 비전 및 전략과 연계하여 인재를 육성함으로써 전통적
+              교육훈련체계의 한계를 극복하여 역량중심의 전략적 교육훈련체계를 수립함을 목적으로 하는 컨설팅입니다.
             </p>
 
           </div>
@@ -22,7 +22,7 @@ const Consulting = () => {
             <Image
               className={styles.img}
               fill={true}
-              src="/consulting.png"
+              src="/consystem.png"
               alt="설명"
             />
           </div>
@@ -32,4 +32,4 @@ const Consulting = () => {
   );
 };
 
-export default Consulting;
+export default Consystem;

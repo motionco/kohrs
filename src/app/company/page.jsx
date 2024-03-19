@@ -38,21 +38,44 @@ const Company = () => {
             <Image
               className={styles.img2}
               fill={true}
-              src="/field.png"
+              src="/areas.png"
               alt="설명"
             />
           </div>
         </div>
-        <div className={styles.items}>
-          <Link href="/portfolio/videos" className={styles.item}>
-            <span className={styles.title}>Videos</span>
-          </Link>
-          <Link href="/portfolio/websites" className={styles.item}>
-            <span className={styles.title}>Websites</span>
-          </Link>
-          <Link href="/portfolio/educations" className={styles.item}>
-            <span className={styles.title}>Educations</span>
-          </Link>
+        <div className={styles.itm}>
+          <div className={styles.content}>
+            <h2 className={styles.mainTitle}>종합 솔루션
+            </h2>
+            <p className={styles.mainDesc}>종합 솔루션
+            </p>
+
+          </div>
+          <div className={styles.imgContainer2}>
+            <Image
+              className={styles.img2}
+              fill={true}
+              src="/solution.png"
+              alt="설명"
+            />
+          </div>
+        </div>
+        <div className={styles.itm}>
+          <div className={styles.content}>
+            <h2 className={styles.mainTitle}>회사 정보
+            </h2>
+            <p className={styles.mainDesc}>회사 정보(임시)
+            </p>
+
+          </div>
+          <div className={styles.imgContainer2}>
+            <Image
+              className={styles.img2}
+              fill={true}
+              src="/info.png"
+              alt="설명"
+            />
+          </div>
         </div>
       </div>
     </>
