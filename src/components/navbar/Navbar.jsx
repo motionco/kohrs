@@ -22,13 +22,13 @@ const Navbar = () => {
             <div className={styles.contents__menu}>
               <ul className={styles.inner}>
                 <li>
-                  <h4>미션</h4>
+                  <Link href="/commission">미션</Link>
                 </li>
                 <li>
-                  <h4>주요 연혁</h4>
+                  <Link href="/commilestone">주요 연혁</Link>
                 </li>
                 <li>
-                  <h4>사업 영역</h4>
+                  <Link href="/comfield">사업 영역</Link>
                 </li>
               </ul>
             </div>
@@ -42,28 +42,28 @@ const Navbar = () => {
         </li>
         <li className={styles.item}>
           <div className={styles.item__name}>
-            <Link href="/company" className={styles.link}>CONSULTING</Link>
+            <Link href="/consulting" className={styles.link}>CONSULTING</Link>
           </div>
           <div className={styles.item__contents}>
             <div className={styles.contents__menu}>
               <ul className={styles.inner}>
                 <li>
-                  <h4>컨설팅 프로세스</h4>
+                  <Link href="/consulting">컨설팅 프로세스</Link>
                 </li>
                 <li>
-                  <h4>직무분석 컨설팅</h4>
+                  <Link href="/conanalysis">직무분석 컨설팅</Link>
                 </li>
                 <li>
-                  <h4>역량모델링 컨설팅</h4>
+                  <Link href="/conmodeling">역량모델링 컨설팅</Link>
                 </li>
                 <li>
-                  <h4>역량기반 교육체계수립 컨설팅</h4>
+                  <Link href="/consystem">역량기반 교육체계수립 컨설팅</Link>
                 </li>
                 <li>
-                  <h4>교육과정개발 컨설팅</h4>
+                  <Link href="/concurriculum">교육과정개발 컨설팅</Link>
                 </li>
                 <li>
-                  <h4>평가 컨설팅</h4>
+                  <Link href="/conevaluation">평가 컨설팅</Link>
                 </li>
               </ul>
             </div>
@@ -77,7 +77,7 @@ const Navbar = () => {
         </li>
         <li className={styles.item}>
           <div className={styles.item__name}>
-            <Link href="/company" className={styles.link}>TRAINING </Link>
+            <Link href="/training" className={styles.link}>TRAINING </Link>
           </div>
           <div className={styles.item__contents}>
             <div className={styles.contents__menu}>
@@ -86,31 +86,31 @@ const Navbar = () => {
                   <h4>교육 훈련 프로세스</h4>
                   <ul>
                     <li>교육 훈련 프로세스</li>
-                    <li>교육 훈련 프로세스</li>
+                    <li><Link href="/training">교육 훈련 프로세스</Link></li>
                   </ul>
                 </li>
                 <li>
                   <h4>리더십</h4>
                   <ul>
-                    <li>퍼포먼스 리더십</li>
-                    <li>코칭 리더십</li>
-                    <li>팀장 리더십</li>
+                    <li><Link href="/trperformance">퍼포먼스 리더십</Link></li>
+                    <li><Link href="/trcoaching">코칭 리더십</Link></li>
+                    <li><Link href="/trteam">팀장 리더십</Link></li>
                   </ul>
                 </li>
                 <li>
                   <h4>퍼포먼스 세일즈</h4>
                   <ul>
-                    <li>퍼포먼스 세일즈</li>
-                    <li>프레젠테이션 실전</li>
-                    <li>고성과 팀빌딩(1)</li>
-                    <li>고성과 팀빌딩(2)</li>
+                    <li><Link href="/trsales">퍼포먼스 세일즈</Link></li>
+                    <li> <Link href="/trpresentation">프레젠테이션 실전</Link></li>
+                    <li><Link href="/trbuilding1">고성과 팀빌딩(1)</Link></li>
+                    <li>   <Link href="/trbuilding2">고성과 팀빌딩(2)</Link></li>
                   </ul>
                 </li>
                 <li>
                   <h4>면접관 교육</h4>
                   <ul>
-                    <li>면접관 교육</li>
-                    <li>일잘러 입문 과정</li>
+                    <li><Link href="/trinterviewer">면접관 교육</Link></li>
+                    <li><Link href="/trbasics">일잘러 입문 과정</Link></li>
                   </ul>
                 </li>
               </ul>

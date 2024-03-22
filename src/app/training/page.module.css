@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  text-align: center;
+
+
+}
+
+.mainTitle {
+  /* font-size: 56px; */
+  color: #53C2C4;
+  margin: 20px 0px 10px 0px;
+}
+
+.mainDesc {
+  font-size: 16px;
+  color: #757575;
+  margin: 10px 0px;
+  line-height: 1.5;
+  font-weight: normal;
+  text-align: center;
+}
+
+.selectTitle {
+  margin: 20px 0px;
+}
+
+.itm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.imgContainer {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  /* margin: 0 auto; */
+}
+
+.img {
+  /* object-fit: cover; */
+  object-fit: contain;
+}
+
+/* 하위 메뉴를 위한 스타일 추가 */
+.itm {
+  z-index: 1;
+  /* 하위 메뉴보다 앞쪽 레이어에 위치 */
+}
