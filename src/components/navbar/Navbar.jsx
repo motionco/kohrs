@@ -92,9 +92,9 @@ const Navbar = () => {
                 <li>
                   <h4>리더십</h4>
                   <ul>
-                    <li><Link href="/trperformance">퍼포먼스 리더십</Link></li>
-                    <li><Link href="/trcoaching">코칭 리더십</Link></li>
-                    <li><Link href="/trteam">팀장 리더십</Link></li>
+                    <li><Link href="/performance">퍼포먼스 리더십</Link></li>
+                    <li><Link href="/coaching">코칭 리더십</Link></li>
+                    <li><Link href="/team">팀장 리더십</Link></li>
                   </ul>
                 </li>
                 <li>

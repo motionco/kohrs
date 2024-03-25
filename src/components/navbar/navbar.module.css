@@ -101,6 +101,8 @@
 
 .header .main-menu .item .item__contents .contents__menu {
   background-color: #121516;
+  color: #fff;
+  font-size: 14px;
 }
 
 .header .main-menu .item .item__contents .contents__menu>ul {
