@@ -46,7 +46,7 @@
 .header .main-menu .item {}
 
 .header .main-menu .item .item__name {
-  padding: 10px 20px 25px;
+  padding: 10px 12px 20px;
   font-family: Arial, sans-serif;
   font-size: 16px;
 }

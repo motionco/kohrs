@@ -1,0 +1,148 @@
+.mainTitle {
+  font-size: 42px;
+  color: #222;
+  margin: 40px 0px;
+
+}
+
+.container {}
+
+.selectTitle {
+  margin: 20px 0px;
+}
+
+.imgContainer {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.imgContainer2 {
+  height: 500px;
+  position: relative;
+}
+
+.img {
+  object-fit: contain;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+
+}
+
+.item {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  max-height: 360px;
+  max-width: 320px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* .item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover !important;
+  background-position: center;
+  transition: all 0.5s ease;
+  filter: grayscale(70%);
+} */
+
+.item:hover::before {
+  transform: scale(1.1);
+  filter: grayscale(0);
+}
+
+.item:nth-child(1)::before {
+  background: url("/videos.jpg");
+}
+
+.item:nth-child(2)::before {
+  background: url("/websites.jpg");
+}
+
+.item:nth-child(3)::before {
+  background: url("/educations.jpg");
+}
+
+.title {
+  /* position: absolute;
+  left: 10px;
+  top: 10px; */
+  font-size: 24px;
+  font-weight: bold;
+
+}
+
+.desc {
+  font-size: 16px;
+  line-height: 1.5rem;
+  color: #777;
+  font-weight: bold;
+  margin-top: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  /* 보여줄 줄 수 */
+  -webkit-box-orient: vertical;
+}
+
+
+.sign {
+  /* position: absolute;
+  left: 10px;
+  top: 60px; */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #555;
+  border-radius: 50%;
+  font-size: 22px;
+  color: #555;
+  margin-top: 20px;
+
+}
+
+.item:hover {
+  background: #00406a;
+  color: #fff;
+}
+
+.item:hover .desc {
+  color: #b7e2ff;
+  /* .item에 호버될 때 .desc와 .sign에도 흰색 글자가 적용되도록 함 */
+}
+
+.item:hover .sign {
+  color: #fff;
+  border: 2px solid #fff;
+  /* .item에 호버될 때 .desc와 .sign에도 흰색 글자가 적용되도록 함 */
+}
+
+
+@media (max-width: 768px) {
+  .items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item {
+    width: 100%;
+    /* 가로 너비가 768px 이하일 때 item의 너비를 100%로 조정 */
+  }
+
+}

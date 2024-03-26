@@ -130,7 +130,7 @@ const Navbar = () => {
             <div className={styles.contents__menu}>
               <ul className={styles.inner}>
                 <li>
-                  <Link href="/coaching/coprocess">코칭 프로세스</Link>
+                  <Link href="/coaching">코칭 프로세스</Link>
                 </li>
                 <li>
                   <Link href="/coaching/coceo">CEO 및 임원 코칭</Link>
@@ -152,6 +152,29 @@ const Navbar = () => {
                 <p>개인과 조직의 동반성장 로드맵 제시</p>
               </div>
             </div>
+          </div>
+        </li>
+        <li className={styles.item}>
+          <div className={styles.item__name}>
+            <Link href="/assessment" className={styles.link}>ASSESSMENT</Link>
+          </div>
+          <div className={styles.item__contents}>
+            <div className={styles.contents__menu}>
+              <ul className={styles.inner}>
+                <li>
+                  <Link href="/assessment/asleadership">리더십역량 진단</Link>
+                </li>
+                <li>
+                  <Link href="/assessment/asjob">직무역량 진단</Link>
+                </li>
+              </ul>
+            </div>
+            {/* <div className={styles.contents__texture}>
+              <div className={styles.inner}>
+                <h4>Strategy</h4>
+                <p>개인과 조직의 동반성장 로드맵 제시</p>
+              </div>
+            </div> */}
           </div>
         </li>
       </ul>
