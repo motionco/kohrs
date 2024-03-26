@@ -1,11 +1,11 @@
 'use client'
-
-// Category.jsx
 import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { items } from "./data.js";
 import { notFound } from "next/navigation";
+import Imgbar from "@/components/imgbar/imgbar";
+import Link from "next/link";
 
 const getData = (cat) => {
   const data = items[cat];
@@ -17,46 +17,27 @@ const getData = (cat) => {
   return notFound();
 };
 
+
 const Category = ({ params }) => {
   console.log(params)
   const data = getData(params.category);
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.catTitle}>{params.category}</h1>
-      <div className={styles.item} key={data.id}>
-        <div className={styles.content}>
-          <h1 className={styles.title}>{data.title}</h1>
-          <div className={styles.desc}>
-            {data.desc && data.desc.split('\n').map((line, index) => (
-              <p key={index}>{line}</p>
-            ))}
-          </div>
-          <h1 className={styles.title}>{data.title2}</h1>
-          <div className={styles.desc}>
-            {data.desc2 && data.desc2.split('\n').map((line, index) => (
-              <p key={index}>{line}</p>
-            ))}
-          </div>
-        </div>
-        <div className={styles.imgContainer}>
-          <Image
-            className={styles.img}
-            fill={true}
-            src={data.image}
-            alt=""
-          />
+    <>
+      <Imgbar />
+      <div className={styles.container}>
+        <h1 className={styles.mainTitle}>{params.category}</h1>
+        <div className={styles.items}>
+          {data.map((item) => (
+            <Link key={item.id} href={item.src} className={styles.item}>
+              <span className={styles.title}>{item.subject}</span>
+              <span className={styles.desc}>{item.summ}</span>
+              <span className={styles.sign}>&#10132;</span>
+            </Link>
+          ))}
         </div>
       </div>
-      <div className={styles.imgContainer2}>
-        <Image
-          className={styles.img}
-          fill={true}
-          src={data.image2}
-          alt=""
-        />
-      </div>
-    </div>
+    </>
   );
 };
 

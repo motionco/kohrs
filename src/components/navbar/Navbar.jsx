@@ -83,34 +83,33 @@ const Navbar = () => {
             <div className={styles.contents__menu}>
               <ul className={styles.inner}>
                 <li>
-                  <h4>교육 훈련 프로세스</h4>
+                  <h4><Link href="/training">교육 훈련 프로세스</Link></h4>
                   <ul>
-                    <li>교육 훈련 프로세스</li>
                     <li><Link href="/training">교육 훈련 프로세스</Link></li>
                   </ul>
                 </li>
                 <li>
-                  <h4>리더십</h4>
+                  <h4><Link href="/training/leadership">리더십</Link></h4>
                   <ul>
-                    <li><Link href="/performance">퍼포먼스 리더십</Link></li>
-                    <li><Link href="/coaching">코칭 리더십</Link></li>
-                    <li><Link href="/team">팀장 리더십</Link></li>
+                    <li><Link href="/training/leadership/performance">퍼포먼스 리더십</Link></li>
+                    <li><Link href="/training/leadership/coaching">코칭 리더십</Link></li>
+                    <li><Link href="/training/leadership/team">팀장 리더십</Link></li>
                   </ul>
                 </li>
                 <li>
-                  <h4>퍼포먼스 세일즈</h4>
+                  <h4><Link href="/training/sales">세일즈</Link></h4>
                   <ul>
-                    <li><Link href="/trsales">퍼포먼스 세일즈</Link></li>
-                    <li> <Link href="/trpresentation">프레젠테이션 실전</Link></li>
-                    <li><Link href="/trbuilding1">고성과 팀빌딩(1)</Link></li>
-                    <li>   <Link href="/trbuilding2">고성과 팀빌딩(2)</Link></li>
+                    <li><Link href="/training/sales/performance">퍼포먼스 세일즈</Link></li>
+                    <li><Link href="/training/sales/presentation">프레젠테이션 실전</Link></li>
+                    <li><Link href="/training/sales/building1">고성과 팀빌딩(1)</Link></li>
+                    <li><Link href="/training/sales/building2">고성과 팀빌딩(2)</Link></li>
                   </ul>
                 </li>
                 <li>
-                  <h4>면접관 교육</h4>
+                  <h4><Link href="/training/interviewer">면접관 교육</Link></h4>
                   <ul>
-                    <li><Link href="/trinterviewer">면접관 교육</Link></li>
-                    <li><Link href="/trbasics">일잘러 입문 과정</Link></li>
+                    <li><Link href="/training/interviewer/interviewer">면접관 교육</Link></li>
+                    <li><Link href="/training/interviewer/basics">일잘러 입문 과정</Link></li>
                   </ul>
                 </li>
               </ul>
@@ -131,19 +130,19 @@ const Navbar = () => {
             <div className={styles.contents__menu}>
               <ul className={styles.inner}>
                 <li>
-                  <h4>코칭 프로세스</h4>
+                  <Link href="/coaching/coprocess">코칭 프로세스</Link>
                 </li>
                 <li>
-                  <h4>CEO 및 임원 코칭</h4>
+                  <Link href="/coaching/coceo">CEO 및 임원 코칭</Link>
                 </li>
                 <li>
-                  <h4>매니저 리더십 코칭</h4>
+                  <Link href="/coaching/comanager">매니저 리더십 코칭</Link>
                 </li>
                 <li>
-                  <h4>성과 코칭</h4>
+                  <Link href="/coaching/coperformance">성과 코칭</Link>
                 </li>
                 <li>
-                  <h4>그룹 코칭</h4>
+                  <Link href="/coaching/cogroup">그룹 코칭</Link>
                 </li>
               </ul>
             </div>
