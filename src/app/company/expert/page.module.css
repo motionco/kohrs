@@ -1,0 +1,91 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* 텍스트를 가운데 정렬합니다. */
+}
+
+.mainTitle {
+  /* font-size: 56px; */
+  color: #53C2C4;
+  margin: 20px 0px 10px 0px;
+}
+
+.mainDesc {
+  font-size: 16px;
+  color: #757575;
+  margin: 10px 0px;
+  line-height: 1.5;
+  font-weight: normal;
+  text-align: center;
+}
+
+/* .selectTitle {
+  margin: 20px 0px;
+} */
+
+.imgWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.imgItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  /* margin-top: 40px;
+  margin-bottom: 40px; */
+}
+
+.imgContainer {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  /* margin: 0 auto; */
+}
+
+/* .imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+
+.imgName {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.img {
+  object-fit: contain;
+}
+
+
+.imageDescription {
+  font-size: 16px;
+  color: #757575;
+  margin: 10px 0px;
+  text-align: center;
+}
+
+.description {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.description p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.description p:first-child {
+  font-weight: bold;
+}

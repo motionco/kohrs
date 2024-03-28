@@ -22,13 +22,16 @@ const Navbar = () => {
             <div className={styles.contents__menu}>
               <ul className={styles.inner}>
                 <li>
-                  <Link href="/commission">미션</Link>
+                  <Link href="/company/commission">미션</Link>
                 </li>
                 <li>
-                  <Link href="/commilestone">주요 연혁</Link>
+                  <Link href="/company/commilestone">주요 연혁</Link>
                 </li>
                 <li>
-                  <Link href="/comfield">사업 영역</Link>
+                  <Link href="/company/comfield">사업 영역</Link>
+                </li>
+                <li>
+                  <Link href="/company/expert">전문가 그룹</Link>
                 </li>
               </ul>
             </div>

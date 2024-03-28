@@ -37,23 +37,27 @@ const Category = ({ params }) => {
             ))}
           </div>
         </div>
-        <div className={styles.imgContainer}>
+        {data.image && (
+          <div className={styles.imgContainer}>
+            <Image
+              className={styles.img}
+              fill={true}
+              src={data.image}
+              alt=""
+            />
+          </div>
+        )}
+      </div>
+      {data.image2 && (
+        <div className={styles.imgContainer2}>
           <Image
             className={styles.img}
             fill={true}
-            src={data.image}
+            src={data.image2}
             alt=""
           />
         </div>
-      </div>
-      <div className={styles.imgContainer2}>
-        <Image
-          className={styles.img}
-          fill={true}
-          src={data.image2}
-          alt=""
-        />
-      </div>
+      )}
     </div>
   );
 };

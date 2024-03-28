@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import Imgbar from "@/components/imgbar/imgbar";
 import Image from "next/image";
+import { Search } from "@mui/icons-material";
 
 const Portfolio = () => {
   return (
@@ -18,6 +19,10 @@ const Portfolio = () => {
             alt=""
           />
         </div>
+
+      </div>
+      <div>
+        <Search className={styles.searchIcon} />
       </div>
     </>
   );
